@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <div class="cadastro-container">
+        <div class="header">
+
+            <a href="index.html" class="back-arrow"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>Cadastro</h2>
+
+        </div>
+
+        <div class="name">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" class="input-field" id="nomeCadastro" name="nomeCadastro"  placeholder="Nome" required>
+        </div>
+
+        <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" class="input-field" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="genero">
+            <i class="fa-solid fa-venus-mars"></i>
+            <select class="select-field" id="genero" name="genero" required>
+                <option value="" disabled selected>Selecione o gênero</option>
+                <option value="masculino" id="masculino">Masculino</option>
+                <option value="feminino" id="feminino">Feminino</option>
+                <option value="outro" id="outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="senha">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" class="input-field" placeholder="Senha" required>
+        </div>
+
+        <button class="cadastro-button" id="cadastro-btn">Cadastrar</button>
+
+        <div class="linkLogin">
+            <a href="login.html" class="login-link">Já tem uma conta? <span class="login-link2"> Faça login </span></a>
+        </div>
+    </div>
+
+
+
+<script src="https://kit.fontawesome.com/a13d0d5b4e.js" crossorigin="anonymous"></script>
+<script src="js/cadastro.js"></script>
+</body>
+</html>

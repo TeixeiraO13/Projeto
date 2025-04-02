@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4A90E2, #145DA0);
+}
+
+.cadastro-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #145DA0;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-arrow:hover {
+    background: #0D3B66;
+    transform: scale(1.2);
+}
+
+.input-field, .select-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-field:focus, .select-field:focus{
+    outline: none;
+}
+
+.cadastro-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #145DA0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+.cadastro-button:hover {
+    background: #0D3B66;
+}
+
+.cadastro-button:active {
+    transform: scale(0.95);
+}
+
+.login-link {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.login-link2{
+    text-decoration: none;
+    color: #4A90E2;
+    font-size: 14px;
+}
+
+.login-link2:hover {
+    text-decoration: underline;
+}
+
+.linkLogin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.name, .email, .genero, .senha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+}
