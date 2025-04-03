@@ -1,0 +1,191 @@
+:root{
+    --branco: #f1efec;
+    --bege: #d4c9be;
+    --azul: #123458;
+    --preto: #030303
+
+}
+
+a, button{
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+header{
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: auto;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    color: var(--branco);
+    gap: 20px;
+
+}
+
+.logo img{
+    margin-left: 20px;
+    height: 7rem;
+    width: auto;
+
+}
+
+.logo span{
+    margin-top: 10px;
+
+}
+
+.outros{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.outros a{
+    color: var(--branco);
+
+}
+
+.outros button{
+    background-color: var(--branco);
+    padding: 1.3rem;
+    border-radius: 40px;
+    margin-right: 20px;
+
+}
+
+.outros button:hover{
+    transform: scale(1.05);
+    opacity: 80%;
+
+}
+
+.outros button a{
+    color: var(--azul); 
+    font-size: 30px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+.loginLink {
+    font-size: 30px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.loginLink:hover{
+    opacity: 85%;
+
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    min-width: 100%;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    min-height: 100%;
+    gap: 1.5rem;
+
+}
+
+.container .h1{
+    font-size: 6rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 3px 5px #2b292952;
+
+}
+
+.container .h2{
+    font-size: 3rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--preto);
+    color: #030303bb;
+
+}
+
+.imgInicial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 9.5rem;
+
+}
+
+.imgInicial img{
+    height: 30rem;
+    width: auto;
+
+}
+
+
+.container button{
+    background-color: var(--azul);
+    padding: 1.5rem;
+    border-radius: 40px;
+    width: 18rem;
+    margin-top: 30px;
+    box-shadow: #12345898 5px 8px;
+
+}
+
+.container button:hover{
+    opacity: 95%;
+    transform: scale(1.05);
+
+}
+
+.container button a{
+    font-size: 3rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--branco);
+
+}
