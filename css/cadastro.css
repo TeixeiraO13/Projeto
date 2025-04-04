@@ -1,8 +1,22 @@
+:root{
+    --branco: #f1efec;
+    --bege: #d4c9be;
+    --azul: #123458;
+    --preto: #030303
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+}
+
+input, button, a, select{
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -10,17 +24,32 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #4A90E2, #145DA0);
+    background-color: var(--azul);
 }
 
 .cadastro-container {
-    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--branco);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    width: 30rem;
+    height: 32rem;
     position: relative;
+    gap: 10px;
+    margin: 13rem;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.cadastro-container i{
+    color: inherit;
+
 }
 
 .header {
@@ -38,8 +67,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #145DA0;
-    color: white;
+    background: var(--azul);
+    color: var(--branco);
     border-radius: 50%;
     text-decoration: none;
     font-size: 18px;
@@ -48,8 +77,8 @@ body {
 }
 
 .back-arrow:hover {
-    background: #0D3B66;
-    transform: scale(1.2);
+    opacity: 90%;
+    transform: scale(1.1);
 }
 
 .input-field, .select-field {
@@ -67,15 +96,15 @@ body {
     width: 100%;
     padding: 10px;
     border: none;
-    background: #145DA0;
-    color: white;
+    background: var(--azul);
+    color: var(--branco);
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
 }
 
 .cadastro-button:hover {
-    background: #0D3B66;
+    opacity: 95%;
 }
 
 .cadastro-button:active {
@@ -84,13 +113,13 @@ body {
 
 .login-link {
     text-decoration: none;
-    color: black;
+    color: var(--preto);
     font-size: 14px;
 }
 
 .login-link2{
     text-decoration: none;
-    color: #145DA0;
+    color: var(--azul);
     font-size: 14px;
 }
 
@@ -114,4 +143,18 @@ body {
     gap: 15px;
     border-bottom: 1px solid #ccc;
     margin: 15px 0;
+}
+
+.imgCadastro img{
+    height: 20rem;
+}
+
+.imgCadastro{
+    padding: 10rem;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
