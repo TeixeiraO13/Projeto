@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 input, button, a, select{
@@ -17,6 +18,11 @@ input, button, a, select{
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
 }
 
 body {
@@ -25,6 +31,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: var(--azul);
+
 }
 
 .cadastro-container {
@@ -45,6 +52,7 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 1.5rem;
+
 }
 
 .cadastro-container i{
@@ -57,13 +65,14 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+
 }
 
 .back-arrow {
     position: absolute;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,11 +83,13 @@ body {
     font-size: 18px;
     font-weight: bold;
     transition: background 0.3s ease-in-out;
+
 }
 
 .back-arrow:hover {
     opacity: 90%;
     transform: scale(1.1);
+
 }
 
 .input-field, .select-field {
@@ -86,10 +97,12 @@ body {
     padding: 10px;
     border-radius: 5px;
     border: none;
+
 }
 
 .input-field:focus, .select-field:focus{
     outline: none;
+
 }
 
 .cadastro-button {
@@ -101,30 +114,41 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
 }
 
 .cadastro-button:hover {
     opacity: 95%;
+
 }
 
 .cadastro-button:active {
     transform: scale(0.95);
+
 }
 
 .login-link {
     text-decoration: none;
     color: var(--preto);
     font-size: 14px;
+
 }
 
 .login-link2{
     text-decoration: none;
     color: var(--azul);
     font-size: 14px;
+
 }
 
 .login-link2:hover {
     text-decoration: underline;
+
 }
 
 .linkLogin{
@@ -133,6 +157,16 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+
+}
+
+.linkLogin a, .login-link2{
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 .name, .email, .genero, .senha{
@@ -143,18 +177,22 @@ body {
     gap: 15px;
     border-bottom: 1px solid #ccc;
     margin: 15px 0;
+
 }
 
 .imgCadastro img{
     height: 20rem;
+
 }
 
 .imgCadastro{
     padding: 10rem;
+
 }
 
 .body{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
