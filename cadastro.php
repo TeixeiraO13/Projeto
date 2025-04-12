@@ -13,7 +13,7 @@
 
     <div class="body">
 
-    <form action="index.html">
+    <form action="" method="post">
 
     <div class="cadastro-container">
         <div class="header">
@@ -25,17 +25,17 @@
 
         <div class="name">
             <i class="fa-solid fa-user"></i>
-            <input type="text" class="input-field" id="nomeCadastro" name="nomeCadastro"  placeholder="Nome" required>
+            <input type="text" class="input-field" id="nomeCadastro" name="nomex"  placeholder="Nome" required>
         </div>
 
         <div class="email">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" class="input-field" id="email" name="email" placeholder="Email" required>
+            <input type="email" class="input-field" id="email" name="emailx" placeholder="Email" required>
         </div>
 
         <div class="genero">
             <i class="fa-solid fa-venus-mars"></i>
-            <select class="select-field" id="genero" name="genero" required>
+            <select class="select-field" id="genero" name="generox" required>
                 <option value="" disabled selected>Selecione o gênero</option>
                 <option value="masculino" id="masculino">Masculino</option>
                 <option value="feminino" id="feminino">Feminino</option>
@@ -44,10 +44,10 @@
 
         <div class="senha">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" class="input-field" placeholder="Senha" required>
+            <input type="password" class="input-field" name="senhax"placeholder="Senha" required>
         </div>
 
-        <button type="submit" class="cadastro-button" id="cadastro-btn">Cadastrar</button>
+        <button type="submit" class="cadastro-button" name="enviarx" id="cadastro-btn">Cadastrar</button>
         
     </form>
 
@@ -64,3 +64,22 @@
 <script src="js/cadastro.js"></script>
 </body>
 </html>
+
+<?php
+
+    include "conexao.php";
+    if (isset($_POST['enviarx'])):
+    $nome=$_POST['nomex'];
+    $email=$_POST['emailx'];
+    $genero=$_POST['generox'];
+    $senha=$_POST['senhax'];
+
+    $sql=mysqli_query($conexao,
+    "INSERT INTO `cadconta` (`id`,`nome`, `email`, `genero`, `senha`)
+    VALUES(NULL,'$nome', '$email', '$genero', '$senha')"
+
+    );
+    endif;
+    
+?>
+
