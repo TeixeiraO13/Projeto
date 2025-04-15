@@ -33,7 +33,7 @@
     </form>
     
         <div class="linkRegister">
-            <a href="cadastro.html" class="register-link">Ainda não tem uma conta? <span class="register-link2"> Cadastre-se</span></a>
+            <a href="cadastro.php" class="register-link">Ainda não tem uma conta? <span class="register-link2"> Cadastre-se</span></a>
         </div>
 
     </div>

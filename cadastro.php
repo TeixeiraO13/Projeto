@@ -52,7 +52,7 @@
     </form>
 
         <div class="linkLogin">
-            <a href="login.html" class="login-link">Já tem uma conta? <span class="login-link2"> Faça login </span></a>
+            <a href="login.php" class="login-link">Já tem uma conta? <span class="login-link2"> Faça login </span></a>
         </div>
     </div>
 
