@@ -38,6 +38,10 @@
 
     </div>
 
+    <div class="img-login">
+        <img src="assets/img/img-login.svg" alt="">
+    </div>
+
 
 
 <script src="https://kit.fontawesome.com/a13d0d5b4e.js" crossorigin="anonymous"></script>    
