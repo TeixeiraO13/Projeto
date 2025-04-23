@@ -70,8 +70,7 @@ if (isset($_POST['enviarx'])) {
         exit();
         
     } else {
-        $erro = "Email ou senha incorretos.";
-        echo "<p style='color: red; text-align: center;'>$erro</p>";
+        echo "<script> alert('Usuário ou senha incorreto')</script>";
     }
 
     mysqli_close($conexao);

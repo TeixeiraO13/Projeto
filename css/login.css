@@ -14,7 +14,8 @@
 }
 body {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 15rem;
     align-items: center;
     height: 100vh;
     background-color: var(--azul);
