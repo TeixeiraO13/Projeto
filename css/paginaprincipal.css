@@ -1,150 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
 :root {
     --branco: #f1efec;
-    --bege: #d4c9be;
     --azul: #123458;
     --preto: #030303;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: "League Spartan", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--branco);
     color: var(--preto);
-    display: flex;
-    min-height: 100vh;
 }
 
-/* LINKS */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* NAVBAR SUPERIOR */
-.navbar {
-    background-color: var(--azul);
-    color: var(--branco);
-    padding: 1.5rem 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px #00000033;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1300px;
-}
-
-.navbar-brand {
-    font-size: 2.8rem;
-    font-family: "Rubik Bubbles", system-ui;
-    font-weight: 400;
-}
-
-/* Usuário logado */
-.navbar-user {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    font-family: "League Spartan", sans-serif;
-}
-
-.navbar-user i {
-    font-size: 1.6rem;
-}
-
-/* SIDEBAR */
 .sidebar {
     width: 250px;
-    background-color: var(--bege);
-    padding-top: 6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    box-shadow: 2px 0 10px #00000033;
-}
-
-.user-info {
-    text-align: center;
-    color: var(--azul);
-    font-weight: bold;
-    font-size: 1.4rem;
-    font-family: "League Spartan", sans-serif;
-}
-
-.user-info i {
-    font-size: 3.2rem;
-    margin-bottom: 0.5rem;
-}
-
-/* MENU */
-.menu {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.menu li a {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.3rem;
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
-    transition: background-color 0.3s, color 0.3s;
-    color: var(--azul);
-    font-weight: 600;
-}
-
-.menu li a:hover {
     background-color: var(--azul);
     color: var(--branco);
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
 }
 
-/* CONTEÚDO PRINCIPAL */
+.sidebar a {
+    color: var(--branco);
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #0e2b45; /* um tom mais escuro que var(--azul) */
+}
+
+.sidebar .active-link {
+    background-color: #0e2b45;
+}
+
+.sidebar .text-center {
+    padding: 10px;
+}
+
+.sidebar-brand {
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 20px 10px 10px;
+    color: #ffffffaa;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--azul);
+    border-top: 1px solid #0e2b45;
+}
+
 .content {
     margin-left: 250px;
-    padding: 8rem 3rem 2rem 3rem;
-    flex: 1;
+    padding: 30px;
+    flex-grow: 1;
+    background-color: var(--branco);
+    color: var(--preto);
 }
 
-.content h1 {
-    font-size: 3.5rem;
-    color: var(--azul);
-    text-shadow: 2px 3px #12345833;
-    font-weight: 700;
+.content-section {
+    display: block;
 }
 
-.content p {
-    font-size: 1.7rem;
-    color: #333;
-    margin-top: 1rem;
-}
-
-/* ÍCONES */
-i {
-    color: inherit;
+.d-none {
+    display: none !important;
 }
