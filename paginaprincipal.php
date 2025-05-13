@@ -21,7 +21,23 @@ if ($resultado_usuario && mysqli_num_rows($resultado_usuario) == 1) {
     $usuario_email = "desconhecido@exemplo.com";
 }
 
+// Fecha a conexão com o banco de dados, pois ela não é mais necessária depois de pegar os dados do usuário
 mysqli_close($conexao);
+
+// Verifica se foi passado o parâmetro 'secao' na URL (ex: ?secao=conta)
+// Se foi, atribui o valor dele à variável $secao
+// Se não foi, define 'conta' como valor padrão
+$secao = isset($_GET['secao']) ? $_GET['secao'] : 'conta';
+
+// Cria uma lista de seções válidas. Esses nomes devem corresponder aos arquivos que existem na pasta 'seções/'
+// Isso é uma proteção simples pra evitar que alguém tente carregar um arquivo aleatório do servidor via URL
+$secoes_validas = ['conta', 'financeiro', 'saude', 'agenda', 'trabalho'];
+
+// Verifica se o valor de $secao está dentro da lista de seções válidas
+// Se não estiver, define 'conta' como padrão (evita erro ou acesso a arquivos indevidos)
+if (!in_array($secao, $secoes_validas)) {
+    $secao = 'conta';
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,58 +58,21 @@ mysqli_close($conexao);
             <p class="mt-2"><?php echo htmlspecialchars($usuario_nome); ?></p>
         </div>
         
-        <a href="#" class="menu-link active-link" data-section="conta"><i class="fa-solid fa-user"></i> Conta</a>
-        <a href="#" class="menu-link" data-section="financeiro"><i class="fa-solid fa-wallet"></i> Financeiro</a>
-        <a href="#" class="menu-link" data-section="saude"><i class="fa-solid fa-heart-pulse"></i> Saúde</a>
-        <a href="#" class="menu-link" data-section="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
-        <a href="#" class="menu-link" data-section="trabalho"><i class="fa-solid fa-briefcase"></i> Trabalho</a>
-        <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        <a href="?secao=conta" class="menu-link <?php if($secao == 'conta') echo 'active-link'; ?>"><i class="fa-solid fa-user"></i> Conta</a>
+        <a href="?secao=financeiro" class="menu-link <?php if($secao == 'financeiro') echo 'active-link'; ?>"><i class="fa-solid fa-wallet"></i> Financeiro</a>
+        <a href="?secao=saude" class="menu-link <?php if($secao == 'saude') echo 'active-link'; ?>"><i class="fa-solid fa-heart-pulse"></i> Saúde</a>
+        <a href="?secao=agenda" class="menu-link <?php if($secao == 'agenda') echo 'active-link'; ?>"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
+        <a href="?secao=trabalho" class="menu-link <?php if($secao == 'trabalho') echo 'active-link'; ?>"><i class="fa-solid fa-briefcase"></i> Trabalho</a>
+        <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
 
         <div class="sidebar-brand">
         LifeTool
         </div>
     </div>
 
-    <div class="content">
-        <div id="conta" class="content-section">
-            <h2>Informações da Conta</h2>
-            <p><strong>Nome:</strong> <?php echo htmlspecialchars($usuario_nome); ?></p>
-            <p><strong>Email:</strong> <?php echo htmlspecialchars($usuario_email); ?></p>
-        </div>
-
-        <div id="financeiro" class="content-section d-none">
-            <h2>Área Financeira</h2>
-            <p>Controle de despesas, receitas, orçamentos, etc.</p>
-        </div>
-
-        <div id="saude" class="content-section d-none">
-            <h2>Área de Saúde</h2>
-            <p>Registros médicos, exames, consultas, etc.</p>
-        </div>
-
-        <div id="agenda" class="content-section d-none">
-            <h2>Agenda</h2>
-            <p>Compromissos, calendários e lembretes.</p>
-        </div>
-
-        <div id="trabalho" class="content-section d-none">
-            <h2>Área de Trabalho</h2>
-            <p>Tarefas profissionais, projetos, metas, etc.</p>
-        </div>
+    <div class="content p-4">
+        <?php include "$secao.php"; ?>
     </div>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script>
-        document.querySelectorAll('.menu-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelectorAll('.menu-link').forEach(l => l.classList.remove('active-link'));
-                this.classList.add('active-link');
-                document.querySelectorAll('.content-section').forEach(section => section.classList.add('d-none'));
-                const selectedSection = this.getAttribute('data-section');
-                document.getElementById(selectedSection).classList.remove('d-none');
-            });
-        });
-    </script>
 </body>
 </html>
