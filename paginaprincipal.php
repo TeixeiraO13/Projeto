@@ -40,39 +40,80 @@ if (!in_array($secao, $secoes_validas)) {
 }
 ?>
 
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeTool - Página Principal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="css/paginaprincipal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    
+<div class="sideBar">
 
-    <div class="sidebar">
-        <div class="text-center mb-4">
-            <i class="fa-solid fa-user-circle fa-3x"></i>
-            <p class="mt-2"><?php echo htmlspecialchars($usuario_nome); ?></p>
-        </div>
-        
-        <a href="?secao=conta" class="menu-link <?php if($secao == 'conta') echo 'active-link'; ?>"><i class="fa-solid fa-user"></i> Conta</a>
-        <a href="?secao=financeiro" class="menu-link <?php if($secao == 'financeiro') echo 'active-link'; ?>"><i class="fa-solid fa-wallet"></i> Financeiro</a>
-        <a href="?secao=saude" class="menu-link <?php if($secao == 'saude') echo 'active-link'; ?>"><i class="fa-solid fa-heart-pulse"></i> Saúde</a>
-        <a href="?secao=agenda" class="menu-link <?php if($secao == 'agenda') echo 'active-link'; ?>"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
-        <a href="?secao=trabalho" class="menu-link <?php if($secao == 'trabalho') echo 'active-link'; ?>"><i class="fa-solid fa-briefcase"></i> Trabalho</a>
-        <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+    <div class="header">
 
-        <div class="sidebar-brand">
-        LifeTool
+    <button class="buttonUser">
+
+        <i class="fa-solid fa-user"></i>
+        <span><?php echo htmlspecialchars($usuario_nome); ?></span>
+        <i class="fa-solid fa-angle-down"></i>
+
+    </button>
+
+    <div class="buttonHeader">
+        <i id='fechaSideBar' class="fa-solid fa-down-left-and-up-right-to-center"></i>
+    </div>
+
+    <div class="popUpUser">
+
+    </div>
+
+    </div>
+
+    <div class="sectionLink">
+
+     <a href="?secao=conta" class="menu-link <?php if($secao == 'conta') echo 'active-link'; ?>">
+        <i class="fa-solid fa-user"></i> Conta
+    </a>
+
+    <a href="?secao=financeiro" class="menu-link <?php if($secao == 'financeiro') echo 'active-link'; ?>">
+            <i class="fa-solid fa-wallet"></i> Financeiro
+    </a>
+
+    <a href="?secao=saude" class="menu-link <?php if($secao == 'saude') echo 'active-link'; ?>">
+            <i class="fa-solid fa-heart-pulse"></i> Saúde
+    </a>
+
+    <a href="?secao=agenda" class="menu-link <?php if($secao == 'agenda') echo 'active-link'; ?>">
+            <i class="fa-solid fa-calendar-days"></i> Agenda
+    </a>
+
+    <a href="?secao=trabalho" class="menu-link <?php if($secao == 'trabalho') echo 'active-link'; ?>">
+            <i class="fa-solid fa-briefcase"></i> Trabalho
+    </a>
+
+    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair
+    </a>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</div>
+
+    <div class='section'>
+
+        <div class="sectionContent">
+            <?php include "$secao.php"; ?>
         </div>
     </div>
 
-    <div class="content p-4">
-        <?php include "$secao.php"; ?>
-    </div>
-
+    <script src="js/paginaInicial.js"></script>
 </body>
 </html>
