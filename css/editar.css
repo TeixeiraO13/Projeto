@@ -1,0 +1,57 @@
+body {
+    background-color: #030303;
+    color: #d4c9be;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    background-color: #123458;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #f1efec;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1efec;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #d4c9be;
+    color: #030303;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1efec;
+}
+
+.preview {
+    margin-top: 10px;
+    text-align: center;
+}
