@@ -66,7 +66,7 @@ if (isset($_POST['enviarx'])) {
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['usuario_nome'] = $usuario['nome'];
 
-        header("Location: paginaprincipal.php"); 
+        header("Location: paginaPrincipal.php"); 
         exit();
         
     } else {

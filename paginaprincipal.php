@@ -47,21 +47,27 @@ if (!in_array($secao, $secoes_validas)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/paginaprincipal.css">
+    <link rel="stylesheet" href="css/paginaPrincipal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     
-<nav id="sidebar">
+<nav id="sidebar" class= 'open-sidebar'>
         <div id="sidebar_content">
-            <div id="user">
-                <img src="avatar.jpg" id="user_avatar" alt="#">
+            <div class='user' id="user">
+                <img class='user' src="avatar.jpg" id="user_avatar" alt="#">
     
-                <p id="user_infos">
-                    <span class="item-description" style='font-size: 20px;'>
+                <p class='user' id="user_infos">
+                    <span class="item-description" style='font-size: 20px; color: #f1efec; display: flex; gap:20px'>
                     <?php echo htmlspecialchars($usuario_nome); ?>
-                    </span>
+                    <i class="fa-solid fa-angle-down" style ='color: #f1efec'></i>
+                </span>
                 </p>
+            </div>
+
+            <div id="popupAcount" class='popupAcountClosed'>
+                <a href="configuracoes.php"><i class="fa-solid fa-gear"></i>Configurações</a>
+                <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
             </div>
     
             <ul id="side_items">
@@ -100,13 +106,21 @@ if (!in_array($secao, $secoes_validas)) {
     
             </ul>
     
-            <button id="open_btn">
+            <button id="open_btn" class='openButton'>
                 <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
 
     </nav>
 
-    <script src="js/paginaInicial.js"></script>
+
+    <div class="section">
+        <div class="sectionContent">
+            <?php include "$secao.php"; ?>
+        </div>
+    </div>
+
+
+    <script src="js/paginaPrincipal.js"></script>
 </body>
 </html>
