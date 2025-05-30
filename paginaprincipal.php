@@ -58,7 +58,7 @@ if (!in_array($secao, $secoes_validas)) {
                 <img class='user' src="avatar.jpg" id="user_avatar" alt="#">
     
                 <p class='user' id="user_infos">
-                    <span class="item-description" style='font-size: 20px; color: #f1efec; display: flex; gap:20px'>
+                    <span class="item-descriptio" style='font-size: 20px; color: #f1efec; display: flex; gap:20px'>
                     <?php echo htmlspecialchars($usuario_nome); ?>
                     <i class="fa-solid fa-angle-down" style ='color: #f1efec'></i>
                 </span>

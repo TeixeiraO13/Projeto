@@ -16,11 +16,10 @@ document.addEventListener('keypress', function(e){
 document.addEventListener('click', function(e){
     var el = e.target
     console.log(el)
-    if(el.classList == 'user' || el.classList == 'item-description' || el.classList == 'fa-solid fa-angle-down'){
+    if(el.classList == 'user' || el.classList == 'item-descriptio' || el.classList == 'fa-solid fa-angle-down'){
         document.getElementById('popupAcount').classList.toggle('popupAcountClosed');
     }else{
         document.getElementById('popupAcount').classList.add('popupAcountClosed');
     }
-
 
 })
